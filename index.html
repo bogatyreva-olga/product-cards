@@ -5,108 +5,77 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <title>Product cards</title>
 </head>
 <body>
 <header class="header">
     <div class="header__container">
-        <div class="header__wrapper">
-            <div class="header__logo">
-                <div class="header__logo-img">
-                    <img src="./img/icons/logo.png" alt="logo">
-                </div>
-            </div>
-            <div class="header__catalog">
-                <button class="header__catalog-trigger">
-                    <span class="header__catalog-icon"></span>
-                    <span class="header__catalog-text">Каталог товаров</span>
-                </button>
-            </div>
-            <div class="header__toolbar">
-                <div class="header__toolbar-wrapper">
-                    <div class="header__toolbar-item header__toolbar-item--search">
-                        <button class="header__search-toggle-disable">
-                            <svg width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M28.213 24.795l-6.283-6.283c-.033-.033-.073-.057-.108-.088a11.831 11.831 0 001.958-6.534C23.78 5.323 18.457 0 11.89 0S0 5.323 0 11.89s5.323 11.89 11.89 11.89c2.414 0 4.659-.721 6.534-1.958.031.035.054.074.088.108l6.283 6.283a2.417 2.417 0 003.418-3.418zM11.89 19.658a7.768 7.768 0 110-15.536 7.768 7.768 0 010 15.536z"
-                                      fill="#000" class="svg-fill" fill-rule="nonzero">
-                                </path>
-                            </svg>
-                        </button>
-                        <div class="header__toolbar-search-wrap header__toolbar-search-wrap-active">
-                            <button class="header__search-toggle">
-                                <svg width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M28.213 24.795l-6.283-6.283c-.033-.033-.073-.057-.108-.088a11.831 11.831 0 001.958-6.534C23.78 5.323 18.457 0 11.89 0S0 5.323 0 11.89s5.323 11.89 11.89 11.89c2.414 0 4.659-.721 6.534-1.958.031.035.054.074.088.108l6.283 6.283a2.417 2.417 0 003.418-3.418zM11.89 19.658a7.768 7.768 0 110-15.536 7.768 7.768 0 010 15.536z"
-                                          fill="#009fe4" class="svg-fill" fill-rule="nonzero">
-                                    </path>
-                                </svg>
-                            </button>
-                            <div class="header__toolbar-search">
-                             <span class="header__search-span">
-                                 <input
-                                         type="text" class="header__search-input typeahead-search" readonly=""
-                                         autocomplete="off" spellcheck="false" tabindex="-1">
-                             </span>
-                                <button class="header__search-close">
-                                    <svg width="21" height="21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.572 9.208L19.208.572l1.364 1.364-8.636 8.636 8.636 8.636-1.364 1.364-8.636-8.636-8.636 8.636-1.364-1.364 8.636-8.636L.572 1.936 1.936.572z"
-                                              fill="#939393" class="svg-fill" fill-rule="nonzero"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header__toolbar-item">
-                        <div class="header__toolbar-favorite-wrap">
-                            <a href="#" class="header__toolbar-favorite">
-                                <svg width="29" height="28" viewBox="0 0 29 28" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M28.95 8.5C28.527 3.841 25.23.461 21.103.461c-2.75 0-5.267 1.48-6.684 3.851C13.015 1.91 10.601.461 7.896.461 3.769.46.47 3.84.049 8.5c-.034.206-.171 1.289.246 3.055.601 2.547 1.99 4.865 4.015 6.7l10.102 9.167 10.276-9.167c2.025-1.835 3.414-4.152 4.015-6.7.417-1.766.28-2.849.247-3.055z"
-                                          fill="#282828" class="svg-fill" fill-rule="nonzero"></path>
-                                </svg>
-                                <span class="header__toolbar-favorite-quantity hidden"></span>
-                            </a>
-                            <div class="header__toolbar-favorite-product">
-                                <a href="/personal/favorite/" class="header__toolbar-favorite-product-link">
-                                    <span class="header__toolbar-favorite-product visually-hidden"
-                                          data-fav-def="Добавлено в избранное"
-                                          data-fav-text="">Добавлено в избранное</span>
-                                    <span class="header__toolbar-favorite-product-title" data-fav-title=""></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header__toolbar-item">
-                        <div class="header__toolbar-cart-wrap">
-                            <a href="/personal/cart/" class="header__toolbar-cart">
-                                <svg width="26" height="30" viewBox="0 0 26 30" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M25.94 28.457L24.26 7.673a.79.79 0 00-.787-.726h-4.51v-1C18.964 2.669 16.332 0 13.052 0h-.104c-3.28 0-5.983 2.668-5.983 5.948v1H2.525a.79.79 0 00-.787.725L.054 28.515a.79.79 0 00.787.853H25.16a.79.79 0 00.78-.911zM8.542 5.947c0-2.408 1.995-4.368 4.404-4.368h.104c2.41 0 4.334 1.96 4.334 4.369v1H8.543v-1z"
-                                          fill="#282828" class="svg-fill" fill-rule="nonzero"></path>
-                                </svg>
-                                <span id="vue-top-basket" class="header__toolbar-cart-quantity empty__cart"></span>
-                            </a>
-                            <div class="header__toolbar-cart-product">
-                                <a href="/personal/cart/" class="header__toolbar-cart-product-link">
-                                    <span class="header__toolbar-cart-product-caption">1 товар добавлен</span>
-                                    <span class="header__toolbar-cart-product-title" data-cart-title=""></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <nav class="header__menu">
             <ul class="header__menu-list">
-                <li class="header__menu-item"><a href="#" class="header__menu-link">Мужское</a>
+                <li class="header__menu-item"><a href="#clothes" class="header__menu-link">Одежда</a>
                 </li>
-                <li class="header__menu-item"><a href="#" class="header__menu-link">Женкское</a>
+                <li class="header__menu-item"><a href="#shoes" class="header__menu-link">Обувь</a>
                 </li>
-                <li class="header__menu-item"><a href="#" class="header__menu-link">Staff</a>
+                <li class="header__menu-item"><a href="#accessories" class="header__menu-link">Оборудование</a>
+                </li>
+                <li class="header__menu-item"><a href="#equipment" class="header__menu-link">Аксесуары</a>
                 </li>
             </ul>
         </nav>
     </div>
 </header>
+<section class="description">
+    <div class="description__wrapper">
+        <div class="description__text">
+            <h2>Магазин</h2>
+            <p>Маттерхорн — один из крупнейших в России специализированных магазинов снаряжения для горнолыжного спорта
+                и сноубординга, всех видов туризма, кемпинга и путешествий, альпинизма и скалолазания, бега и
+                мультигонок.
+                Мы открыты ежедневно с 10:00 до 24:00</p>
+        </div>
+        <div class="description__img">
+            <img src="./img/img-site/about.jpg" alt="about-me">
+        </div>
+    </div>
+</section>
+<section class="catalog" id="clothes">
+    <h2 class="catalog__title">Одежда</h2>
+    <div class="catalog__clothes catalog-style"></div>
+</section>
+<section class="catalog" id="shoes">
+    <h2 class="catalog__title" >Обувь</h2>
+    <div class="catalog__shoes catalog-style"></div>
+</section>
+<section class="catalog" id="accessories">
+    <h2 class="catalog__title" >Аксессуары</h2>
+    <div class="catalog__shoes catalog-style"></div>
+</section>
+<section class="catalog" id="equipment">
+    <h2 class="catalog__title" >Снаряжение</h2>
+    <div class="catalog__shoes catalog-style"></div>
+</section>
+<template id="card">
+    <div class="card">
+        <div class="card__images">
+            <div>
+                <img src="img/catalog/clothes/dress-j-w.webp" alt="dress"/>
+            </div>
+        </div>
+        <div class="card__info-product">
+            <div class="card__title">
+                <span class="card__text">Название товара</span>
+            </div>
+            <div class="card__price">
+                <div class="price"><span>450</span><span class="card__price-symbol">₽</span></div>
+            </div>
+            <button class="card__basket"><span>В корзину</span></button>
+        </div>
+    </div>
+</template>
+<button class="button-scroll-up button-scroll-up__hide">
+    <img src="./img/icons/up.png" alt="вверх">
+</button>
 </body>
 </html>
