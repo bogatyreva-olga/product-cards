@@ -5,6 +5,8 @@ const CATEGORY_NAME_CLOTHES = "clothes";
 const CATEGORY_NAME_ACCESSORIES = "accessories";
 const CATEGORY_NAME_EQUIPMENT = "equipment";
 
+let categoryNames = ["shoes", "clothes", "accessories", "equipment"];
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const buttonScrollUp = {
@@ -50,6 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return cardElement;
     }
+    //
+    // for (let i = 0; i < categoryNames.length; i++) {
+    //     let catalogElements = document.querySelector('.catalog__' + categoryNames[i])
+    // }
 
     let catalogElemClothes = document.querySelector('.catalog__clothes');
     let catalogCategoryClothes = catalog.filter(item => item.category === "clothes");

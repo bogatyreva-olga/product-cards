@@ -1,0 +1,252 @@
+/*global style*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+html {
+    scroll-padding-top: 150px;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+p,
+h3 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*header*/
+
+header {
+    position: fixed;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 120px;
+    will-change: height, background-color;
+    margin-bottom: 2rem;
+}
+
+nav {
+    height: 3rem;
+    position: sticky;
+}
+
+.header__menu-list {
+    display: flex;
+    text-transform: uppercase;
+    gap: 3rem;
+    font-family: "Rubik Regular", sans-serif;
+    justify-content: center;
+}
+
+.header__menu-item a {
+    font-size: 24px;
+    font-weight: 400;
+}
+/*description*/
+
+.description {
+    background-size: cover;
+    height: 500px;
+    margin-top: 120px;
+    margin-bottom: 5rem;
+}
+
+.description__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.description__text h2 {
+    text-align: center;
+    font-size: 78px;
+}
+
+.description__text p {
+    font-size: 24px;
+    text-align: center;
+    line-height: 30px;
+    padding: 0 120px;
+}
+
+.button-scroll-up {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: all 0.5s ease;
+}
+
+.button-scroll-up__hide {
+    display: none;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/*catalog*/
+.catalog {
+    margin-bottom: 100px;
+}
+
+.catalog-style {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: start;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.catalog__title {
+    text-align: center;
+}
+
+/*card*/
+.card {
+    width: 250px;
+    height: 350px;
+    border: 2px solid #ECF0F4;
+    position: relative;
+    border-radius: 5px;
+}
+
+.card__quantity {
+    margin-bottom: 25px;
+}
+
+
+.card__basket {
+    display: flex;
+    margin: 0 auto;
+    border: none;
+    width: 170px;
+    height: 40px;
+    cursor: pointer;
+    background: url("./img/icons/basket.svg") no-repeat #f60606;
+    color: #ffffff;
+    background-position-x: 15px;
+    background-position-y: center;
+    padding: 20px;
+    align-items: center;
+}
+
+.card__basket:hover {
+    background: url("./img/icons/basket.svg") no-repeat #e58484;
+    background-position-x: 15px;
+    background-position-y: center;
+}
+
+.card__images {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__basket span {
+    margin-left: 30%;
+    text-transform: uppercase;
+}
+
+.card__images {
+    height: 213px;
+    width: 213px;
+    margin: 0 auto 10px;
+    position: relative;
+}
+
+.card__images img {
+    max-width: 200px;
+}
+
+.card__wrapper-aside-icons {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    right: 20px;
+    top: 20px;
+}
+
+.card__title {
+    padding: 0 25px;
+    margin: 0 auto 5px;
+}
+
+.card__text {
+    font-family: "Rubik Regular", sans-serif;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.card__price {
+    font-family: "Rubik Bold", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.card__price-symbol {
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.card__info-product {
+    display: grid;
+    margin-bottom: 25px;
+    grid-template-rows: 40px auto auto;
+}
+
+
