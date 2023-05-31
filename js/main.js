@@ -52,25 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
         return cardElement;
     }
 
-    let section = document.querySelector('.catalog__' + CATEGORY_NAME_CLOTHES);
-    getItemsByCategory(CATEGORY_NAME_CLOTHES).forEach((item) => {
-        section.appendChild(createCardElement(item));
+    let categories = [CATEGORY_NAME_CLOTHES, CATEGORY_NAME_SHOES, CATEGORY_NAME_ACCESSORIES, CATEGORY_NAME_EQUIPMENT];
+
+    categories.forEach((name) => {
+        let section = document.querySelector('.catalog__' + name);
+        getItemsByCategory(name).forEach((item) => {
+            section.appendChild(createCardElement(item));
+        })
     })
-
-    let section1 = document.querySelector('.catalog__' + CATEGORY_NAME_SHOES);
-    getItemsByCategory(CATEGORY_NAME_SHOES).forEach((item) => {
-        section1.appendChild(createCardElement(item));
-    })
-
-    let section2 = document.querySelector('.catalog__' + CATEGORY_NAME_ACCESSORIES);
-    getItemsByCategory(CATEGORY_NAME_ACCESSORIES).forEach((item) => {
-        section2.appendChild(createCardElement(item));
-    })
-
-    let section3 = document.querySelector('.catalog__' + CATEGORY_NAME_EQUIPMENT);
-    getItemsByCategory(CATEGORY_NAME_EQUIPMENT).forEach((item) => {
-        section3.appendChild(createCardElement(item));
-    })
-
-
 })
