@@ -53,10 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return cardElement;
     }
 
-    let catalogElemClothes = document.querySelector('.catalog__clothes');
-    let catalogCategoryClothes = catalog.filter(item => item.category === "clothes");
-    catalogCategoryClothes.forEach((item) => {
-        catalogElemClothes.appendChild(createCardElement(item));
+    let section1 = document.querySelector('.catalog__' + CATEGORY_NAME_CLOTHES);
+    getItemsByCategory(CATEGORY_NAME_CLOTHES).forEach((item) => {
+        section1.appendChild(createCardElement(item));
     })
 
     let section = document.querySelector('.catalog__' + CATEGORY_NAME_SHOES);
@@ -64,6 +63,15 @@ document.addEventListener("DOMContentLoaded", function () {
         section.appendChild(createCardElement(item));
     })
 
+    let section2 = document.querySelector('.catalog__' + CATEGORY_NAME_ACCESSORIES);
+    getItemsByCategory(CATEGORY_NAME_ACCESSORIES).forEach((item) => {
+        section2.appendChild(createCardElement(item));
+    })
+
+    let section3 = document.querySelector('.catalog__' + CATEGORY_NAME_EQUIPMENT);
+    getItemsByCategory(CATEGORY_NAME_EQUIPMENT).forEach((item) => {
+        section3.appendChild(createCardElement(item));
+    })
 
     const btn = document.querySelector(".header__theme");
     const theme = document.querySelector("#theme-link");
