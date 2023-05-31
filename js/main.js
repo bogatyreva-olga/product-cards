@@ -1,14 +1,13 @@
-import {catalog, getItemsByCategory} from "./data.js";
+import {getItemsByCategory} from "./data.js";
+import {toggleTheme} from "./theme.js";
 
 const CATEGORY_NAME_SHOES = "shoes";
 const CATEGORY_NAME_CLOTHES = "clothes";
 const CATEGORY_NAME_ACCESSORIES = "accessories";
 const CATEGORY_NAME_EQUIPMENT = "equipment";
 
-let categoryNames = ["shoes", "clothes", "accessories", "equipment"];
-
 document.addEventListener("DOMContentLoaded", function () {
-
+    toggleTheme();
     const buttonScrollUp = {
         el: document.querySelector('.button-scroll-up'),
         show() {
@@ -53,14 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return cardElement;
     }
 
-    let section1 = document.querySelector('.catalog__' + CATEGORY_NAME_CLOTHES);
+    let section = document.querySelector('.catalog__' + CATEGORY_NAME_CLOTHES);
     getItemsByCategory(CATEGORY_NAME_CLOTHES).forEach((item) => {
-        section1.appendChild(createCardElement(item));
+        section.appendChild(createCardElement(item));
     })
 
-    let section = document.querySelector('.catalog__' + CATEGORY_NAME_SHOES);
+    let section1 = document.querySelector('.catalog__' + CATEGORY_NAME_SHOES);
     getItemsByCategory(CATEGORY_NAME_SHOES).forEach((item) => {
-        section.appendChild(createCardElement(item));
+        section1.appendChild(createCardElement(item));
     })
 
     let section2 = document.querySelector('.catalog__' + CATEGORY_NAME_ACCESSORIES);
@@ -73,10 +72,5 @@ document.addEventListener("DOMContentLoaded", function () {
         section3.appendChild(createCardElement(item));
     })
 
-    const btn = document.querySelector(".header__theme");
-    const theme = document.querySelector("#theme-link");
 
-    btn.addEventListener("click", function() {
-        document.body.classList.toggle('dark-theme');
-    });
 })
