@@ -52,10 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return cardElement;
     }
-    //
-    // for (let i = 0; i < categoryNames.length; i++) {
-    //     let catalogElements = document.querySelector('.catalog__' + categoryNames[i])
-    // }
 
     let catalogElemClothes = document.querySelector('.catalog__clothes');
     let catalogCategoryClothes = catalog.filter(item => item.category === "clothes");
@@ -67,4 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
     getItemsByCategory(CATEGORY_NAME_SHOES).forEach((item) => {
         section.appendChild(createCardElement(item));
     })
+
+
+    const btn = document.querySelector(".header__theme");
+    const theme = document.querySelector("#theme-link");
+
+    btn.addEventListener("click", function() {
+        document.body.classList.toggle('dark-theme');
+    });
 })

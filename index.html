@@ -7,10 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="module" src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="./main.css">
-    <link rel="stylesheet" type="text/css" href="./style.css">
     <title>Product cards</title>
 </head>
-<body>
+<body class="dark-theme || light-theme">
 <header class="header">
     <div class="header__container">
         <nav class="header__menu">
@@ -25,6 +24,9 @@
                 </li>
             </ul>
         </nav>
+        <button class="header__theme">
+            <img src="./img/icons/dark.svg" alt="theme">
+        </button>
     </div>
 </header>
 <section class="description">
@@ -46,15 +48,15 @@
     <div class="catalog__clothes catalog-style"></div>
 </section>
 <section class="catalog" id="shoes">
-    <h2 class="catalog__title" >Обувь</h2>
+    <h2 class="catalog__title">Обувь</h2>
     <div class="catalog__shoes catalog-style"></div>
 </section>
 <section class="catalog" id="accessories">
-    <h2 class="catalog__title" >Аксессуары</h2>
+    <h2 class="catalog__title">Аксессуары</h2>
     <div class="catalog__shoes catalog-style"></div>
 </section>
 <section class="catalog" id="equipment">
-    <h2 class="catalog__title" >Снаряжение</h2>
+    <h2 class="catalog__title">Снаряжение</h2>
     <div class="catalog__shoes catalog-style"></div>
 </section>
 <template id="card">

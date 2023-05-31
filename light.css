@@ -1,6 +1,6 @@
 /*/headers*/
 header {
-    background: #f4f4f4;
+    background: #d5d4d4;
 }
 
 html {
@@ -16,7 +16,7 @@ html {
 }
 
 .header__menu-item a:hover {
-    color: #646464;
+    color: #7a7878;
 }
 
 /*description*/
@@ -26,11 +26,11 @@ html {
 }
 
 .description__text h2 {
-    color: #ffffff;
+    color: #f4f4f4;
 }
 
 .description__text p {
-    color: #ffffff;
+    color: #f4f4f4;
 }
 
 .button-scroll-up {
@@ -41,9 +41,12 @@ html {
     background-color: #ffffff;
 }
 
-/*catalog*/
-
 /*card*/
+
 .card {
-     border: 2px solid #ECF0F4;
-   }
+    background: #f4f4f4;
+}
+
+.card:hover {
+    box-shadow: 0 0 8px 12px rgb(0 0 0 / 22%), 0 0 10px rgb(0 0 0 / 28%);
+}
