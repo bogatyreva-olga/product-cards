@@ -29,6 +29,7 @@
         </button>
     </div>
 </header>
+
 <section class="description">
     <div class="description__wrapper">
         <div class="description__text">
@@ -43,6 +44,7 @@
         </div>
     </div>
 </section>
+
 <section class="catalog" id="clothes">
     <h2 class="catalog__title">Одежда</h2>
     <div class="catalog__clothes catalog-style"></div>
@@ -59,6 +61,35 @@
     <h2 class="catalog__title">Снаряжение</h2>
     <div class="catalog__equipment catalog-style"></div>
 </section>
+
+<div id="modal-product" class="modal">
+    <div class="modal-content">
+        <span id="modal-close" class="close">&times;</span>
+        <div id="modal-card">
+            <div>
+                <h2 class="modal-title">Корзина</h2>
+            </div>
+            <form id="product-form">
+                <input type="hidden" name="id" class="form__product-id" value="">
+                <div class="form__product-title">Название товара</div>
+                <div class="form__quantity-buttons">
+                    <span>Количество</span>
+                    <button class="form__minus-btn minus-btn-2"></button>
+                    <input type="text" value="1" class="form__quantity-input quantity-input-2" readonly="readonly">
+                    <button class="form__plus-btn plus-btn-2"></button>
+                </div>
+                <div class="form__product-colors"></div>
+                <div class="form__comment">
+                    <label>
+                        <textarea name="comment" placeholder="Комментрий"></textarea>
+                    </label>
+                </div>
+                <button id="product-submit" type="submit">Купить</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 <template id="card">
     <div class="card">
         <div class="card__images">

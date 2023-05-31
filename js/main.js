@@ -1,5 +1,6 @@
 import {getItemsByCategory} from "./data.js";
 import {toggleTheme} from "./theme.js";
+import {showModal} from "./form.js";
 
 const CATEGORY_NAME_SHOES = "shoes";
 const CATEGORY_NAME_CLOTHES = "clothes";
@@ -43,11 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
         img.src = item.image;
         img.alt = item.title;
 
-        cardElement.querySelector(".card__images div").appendChild(img)
-
+        cardElement.querySelector(".card__images div").appendChild(img);
         cardElement.querySelector(".price span").innerText = item.price;
-
         cardElement.querySelector(".card__text").textContent = item.title;
+        cardElement.querySelector(".card__basket").addEventListener("click", () => {
+            showModal(item);
+        })
 
         return cardElement;
     }
