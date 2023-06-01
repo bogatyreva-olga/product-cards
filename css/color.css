@@ -1,63 +1,79 @@
-.black{
+.black:checked + label::before,
+.black + label::before {
     background-color: #000000;
 }
 
-.pink {
+.pink:checked + label::before,
+.pink + label::before {
     background-color: #e76da4;
 }
 
-.light-blue {
+.light-blue:checked + label::before,
+.light-blue + label::before {
     background-color: #37c1d5;
 }
 
-.grey {
+.grey:checked + label::before,
+.grey + label::before {
     background-color: #a5b2b2;
 }
 
-.green {
+.green:checked + label::before,
+.green + label::before {
     background-color: #4e7729;
 }
 
-.white {
-    background-color: #ffffff;
+.white:checked + label::before,
+.white + label::before {
+    background-color: #d5d5d5;
 }
 
-.beige {
+.beige:checked + label::before,
+.beige + label::before {
     background-color: #8d8282;
 }
 
-.blue {
+.blue:checked + label::before,
+.blue + label::before {
     background-color: #005b88;
 }
 
-.yellow {
+.yellow:checked + label::before,
+.yellow + label::before {
     background-color: #ded77c;
 }
 
-.red {
+.red:checked + label::before,
+.red + label::before {
     background-color: #bd3838;
 }
 
-.light-grey {
+.light-grey:checked + label::before,
+.light-grey + label::before {
     background-color: #b7b7b7;
 }
 
-.terracotta {
+.terracotta:checked + label::before,
+.terracotta + label::before {
     background-color: #805239;
 }
 
-.orange {
+.orange:checked + label::before,
+.orange + label::before {
     background-color: #e7781d;
 }
 
-.turquoise {
+.turquoise:checked + label::before,
+.turquoise + label::before {
     background-color: #0daf97;
 }
 
-.cherry {
+.cherry:checked + label::before,
+.cherry + label::before {
     background-color: #75235b;
 }
 
-.brown {
+.brown:checked + label::before,
+.brown + label::before {
     background-color: #5e4747;
 }

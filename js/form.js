@@ -27,11 +27,13 @@ let showModal = (item) => {
         radio.value = color.slug;
         radio.name = "color";
         radio.id = "color_" + color.slug + "_" + item.id;
+        radio.classList.add("color-radio");
+        radio.classList.add(color.slug);
 
         let label = document.createElement("label");
-        label.for = radio.id;
+        label.setAttribute("for", radio.id);
         label.innerText = color.name;
-        label.classList.add(color.slug);
+
 
         div.appendChild(radio);
         div.appendChild(label);
@@ -42,7 +44,7 @@ let showModal = (item) => {
     modal.querySelector('#product-submit').addEventListener('click', (e) => {
         e.preventDefault();
 
-        alert("Товар \""  + item.title + "\" успешно приобретен");
+        alert("Товар \"" + item.title + "\" успешно приобретен");
     });
     modal.style.display = "block";
 };
