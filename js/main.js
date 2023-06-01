@@ -1,4 +1,4 @@
-import {getItemsByCategory} from "./data.js";
+import {getItemsByCategory, getDayInfo} from "./data.js";
 import {toggleTheme} from "./theme.js";
 import {showModal} from "./form.js";
 
@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         cardElement.querySelector(".card__images div").appendChild(img);
         cardElement.querySelector(".price span").innerText = item.price;
+        cardElement.querySelector(".date span").innerText = getDayInfo(item.publicationDate);
         cardElement.querySelector(".card__text").textContent = item.title;
         cardElement.querySelector(".card__basket").addEventListener("click", () => {
             showModal(item);
