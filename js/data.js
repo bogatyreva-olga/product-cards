@@ -8,12 +8,10 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#bb1f6c",
                 slug: "pink",
                 name: "Розовый",
             },
             {
-                hex: "#000",
                 slug: "black",
                 name: "Чёрный",
             }
@@ -29,8 +27,15 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#37c1d5",
-                slug: "blue",
+                slug: "light-blue",
+                name: "Голубой",
+            },
+            {
+                slug: "grey",
+                name: "Серый",
+            },
+            {
+                slug: "green",
                 name: "Голубой",
             },
         ],
@@ -46,13 +51,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#a5b2b2",
-                slug: "some",
+                slug: "grey",
                 name: "Серый",
             },
             {
-                hex: "#050404",
-                slug: "some",
+                slug: "black",
                 name: "Чёрный",
             },
         ],
@@ -68,13 +71,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#f1f6f6",
-                slug: "some",
+                slug: "white",
                 name: "Белый",
             },
             {
-                hex: "#4e7729",
-                slug: "some",
+                slug: "green",
                 name: "Зелёный",
             },
         ],
@@ -90,13 +91,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#8d8282",
-                slug: "some",
+                slug: "beige",
                 name: "Бежевый",
             },
             {
-                hex: "#ec9bbb",
-                slug: "some",
+                slug: "pink",
                 name: "Розовый",
             },
         ],
@@ -111,13 +110,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#1b597c",
-                slug: "some",
+                slug: "blue",
                 name: "Синий",
             },
             {
-                hex: "#ded77c",
-                slug: "some",
+                slug: "yellow",
                 name: "Жёлтый",
             },
         ],
@@ -132,8 +129,7 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#837c7c",
-                slug: "some",
+                slug: "beige",
                 name: "Бежевый",
             },
         ],
@@ -148,8 +144,7 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#000000",
-                slug: "some",
+                slug: "black",
                 name: "Чёрный",
             },
         ],
@@ -164,13 +159,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#bd3838",
-                slug: "some",
+                slug: "red",
                 name: "Красный",
             },
             {
-                hex: "#ffffff",
-                slug: "some",
+                slug: "white",
                 name: "Белый",
             },
         ],
@@ -185,13 +178,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#868686",
-                slug: "some",
+                slug: "grey",
                 name: "Серый",
             },
             {
-                hex: "#ffffff",
-                slug: "some",
+                slug: "white",
                 name: "Белый",
             },
         ],
@@ -206,13 +197,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#837c7c",
-                slug: "some",
+                slug: "beige",
                 name: "Бежевый",
             },
             {
-                hex: "#000000",
-                slug: "some",
+                slug: "black",
                 name: "Черный",
             },
         ],
@@ -227,8 +216,7 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#37dcd7",
-                slug: "some",
+                slug: "light-blue",
                 name: "Голубой",
             },
         ],
@@ -243,13 +231,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#f60606",
-                slug: "some",
+                slug: "red",
                 name: "Красный",
             },
             {
-                hex: "#838383",
-                slug: "some",
+                slug: "grey",
                 name: "Серый",
             },
         ],
@@ -264,13 +250,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#f60606",
-                slug: "some",
+                slug: "red",
                 name: "Красный",
             },
             {
-                hex: "#ded77c",
-                slug: "some",
+                slug: "yellow",
                 name: "Жёлтый",
             },
         ],
@@ -285,13 +269,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#19944f",
-                slug: "some",
+                slug: "green",
                 name: "Зелёный",
             },
             {
-                hex: "#ded77c",
-                slug: "some",
+                slug: "yellow",
                 name: "Жёлтый",
             },
         ],
@@ -300,19 +282,17 @@ const catalog = [
     {
         id: "14",
         title: "Куртка мембранная Jack Wolfskin",
-        image: "img/catalog/clothes/man-jack_wolfskin_big_snow_pants.webp",
+        image: "img/catalog/clothes/jacket-membrain-jw.webp",
         price: 10000,
         sex: "female", 
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#3145ab",
-                slug: "some",
+                slug: "blue",
                 name: "Синий",
             },
             {
-                hex: "#f60606",
-                slug: "some",
+                slug: "red",
                 name: "Красный",
             },
         ],
@@ -327,13 +307,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#3145ab",
-                slug: "some",
+                slug: "blue",
                 name: "Синий",
             },
             {
-                hex: "#090909",
-                slug: "some",
+                slug: "black",
                 name: "Чёрный",
             },
         ],
@@ -348,18 +326,15 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#626161",
-                slug: "some",
+                slug: "grey",
                 name: "Серый",
             },
             {
-                hex: "#090909",
-                slug: "some",
+                slug: "black",
                 name: "Чёрный",
             },
             {
-                hex: "#d01919",
-                slug: "some",
+                slug: "red",
                 name: "Красный",
             },
         ],
@@ -374,8 +349,7 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#090909",
-                slug: "some",
+                slug: "black",
                 name: "Чёрный",
             },
         ],
@@ -390,13 +364,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#837c7c",
-                slug: "some",
+                slug: "beige",
                 name: "Бежевый",
             },
             {
-                hex: "#9d9d9d",
-                slug: "some",
+                slug: "light-grey",
                 name: "Светло-серый",
             },
         ],
@@ -411,13 +383,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#837c7c",
-                slug: "some",
+                slug: "beige",
                 name: "Бежевый",
             },
             {
-                hex: "#9d9d9d",
-                slug: "some",
+                slug: "light-grey",
                 name: "Светло-серый",
             },
         ],
@@ -432,19 +402,16 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#837c7c",
-                slug: "some",
+                slug: "beige",
                 name: "Бежевый",
             },
             {
-                hex: "#9d9d9d",
-                slug: "some",
+                slug: "light-grey",
                 name: "Светло-серый",
             },
             {
-                hex: "#805239",
-                slug: "some",
-                name: "Горчичный",
+                slug: "terracotta",
+                name: "Терракотовый",
             },
         ],
         category: "accessories", 
@@ -458,18 +425,15 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#3751d5",
-                slug: "some",
+                slug: "blue",
                 name: "Синий",
             },
             {
-                hex: "#070101",
-                slug: "some",
+                slug: "black",
                 name: "Черный",
             },
             {
-                hex: "#068633",
-                slug: "some",
+                slug: "green",
                 name: "Зелёный",
             },
         ],
@@ -484,13 +448,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#070101",
-                slug: "some",
+                slug: "black",
                 name: "Черный",
             },
             {
-                hex: "#837c7c",
-                slug: "some",
+                slug: "beige",
                 name: "Бежевый",
             },
         ],
@@ -505,13 +467,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#070101",
-                slug: "some",
+                slug: "black",
                 name: "Черный",
             },
             {
-                hex: "#d76813",
-                slug: "some",
+                slug: "orange",
                 name: "Оранжевый",
             },
         ],
@@ -526,8 +486,7 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#ffffff",
-                slug: "some",
+                slug: "white",
                 name: "Белый",
             },
         ],
@@ -542,13 +501,11 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#d76813",
-                slug: "some",
+                slug: "orange",
                 name: "Оранжевый",
             },
             {
-                hex: "#000000",
-                slug: "some",
+                slug: "black",
                 name: "Чёрный",
             },
         ],
@@ -563,14 +520,12 @@ const catalog = [
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#0daf97",
-                slug: "some",
+                slug: "turquoise",
                 name: "Бирюзовый",
             },
             {
-                hex: "#75235b",
-                slug: "some",
-                name: "Малиновый",
+                slug: "cherry",
+                name: "Вишневый",
             },
         ],
         category: "shoes", 
@@ -580,16 +535,87 @@ const catalog = [
         title: "Ботинок Gar Sport",
         image: "img/catalog/shoes/garsport-shoes-man.webp",
         price: 12500,
-        sex: "male", 
+        sex: "unisex",
         publicationDate: "01.01.2022",
         colors: [
             {
-                hex: "#5e4747",
-                slug: "some",
+                slug: "brown",
                 name: "Коричневый",
             },
         ],
         category: "shoes", 
+    },
+    {
+        id: "27",
+        title: "Носки спортивные",
+        image: "img/catalog/accessories/socks-sport.webp",
+        price: 800,
+        sex: "unisex",
+        publicationDate: "01.01.2022",
+        colors: [
+            {
+                slug: "white",
+                name: "Белый",
+            },
+            {
+                slug: "red",
+                name: "Красный",
+            },
+            {
+                slug: "orange",
+                name: "Оранжевый",
+            },
+            {
+                slug: "blue",
+                name: "Синий",
+            },
+        ],
+        category: "accessories",
+    },
+    {
+        id: "28",
+        title: "Кроссовок Jack Wolfskin",
+        image: "img/catalog/shoes/sneakers-man-jack-wolfskin.webp",
+        price: 11300,
+        sex: "male",
+        publicationDate: "01.01.2022",
+        colors: [
+            {
+                slug: "brown",
+                name: "Коричневый",
+            },
+        ],
+        category: "shoes",
+    },
+    {
+        id: "29",
+        title: "Карабин Vertikal овал",
+        image: "img/catalog/equipment/carabine-vertikal.webp",
+        price: 750,
+        sex: "unisex",
+        publicationDate: "01.01.2022",
+        colors: [
+            {
+                slug: "grey",
+                name: "Серый",
+            },
+        ],
+        category: "equipment",
+    },
+    {
+        id: "30",
+        title: "Футболка женская Maloja",
+        image: "img/catalog/clothes/maloja_womens_dambelm_sport_shirt.webp",
+        price: 5500,
+        sex: "female",
+        publicationDate: "01.01.2022",
+        colors: [
+            {
+                slug: "blue",
+                name: "Синий",
+            },
+        ],
+        category: "clothes",
     },
 ];
 

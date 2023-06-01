@@ -166,7 +166,6 @@ nav {
     height: 350px;
     border: 2px solid #e1e1e1;
     position: relative;
-    border-radius: 5px;
     transition: .5s;
 }
 
@@ -279,8 +278,6 @@ nav {
     grid-template-rows: 40px auto auto;
 }
 
-
-/*light-theme*/
 /*/headers*/
 
 header {

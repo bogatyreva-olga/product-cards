@@ -31,7 +31,7 @@ let showModal = (item) => {
         let label = document.createElement("label");
         label.for = radio.id;
         label.innerText = color.name;
-        label.style.backgroundColor = color.hex;
+        label.classList.add(color.slug);
 
         div.appendChild(radio);
         div.appendChild(label);
