@@ -1,6 +1,7 @@
 import {getItemsByCategory, getDayInfo} from "./data.js";
 import {toggleTheme} from "./theme.js";
 import {showModal} from "./form.js";
+import {buttonScrollUp} from "./scroll-up.js";
 
 const CATEGORY_NAME_SHOES = "shoes";
 const CATEGORY_NAME_CLOTHES = "clothes";
@@ -9,29 +10,6 @@ const CATEGORY_NAME_EQUIPMENT = "equipment";
 
 document.addEventListener("DOMContentLoaded", function () {
     toggleTheme();
-    const buttonScrollUp = {
-        el: document.querySelector('.button-scroll-up'),
-        show() {
-            this.el.classList.remove('button-scroll-up__hide');
-        },
-        hide() {
-            this.el.classList.add('button-scroll-up__hide');
-        },
-        addEventListener() {
-            window.addEventListener('scroll', () => {
-                const scrollY = window.scrollY || document.documentElement.scrollTop;
-                scrollY > 400 ? this.show() : this.hide();
-            });
-            document.querySelector('.button-scroll-up').onclick = () => {
-                window.scrollTo({
-                    top: 0,
-                    left: 0,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    }
-
     buttonScrollUp.addEventListener();
 
     const createCardElement = (item) => {
