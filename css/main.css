@@ -163,10 +163,11 @@ nav {
 /*card*/
 .card {
     width: 250px;
-    height: 350px;
+    min-height: 350px;
     border: 2px solid #e1e1e1;
     position: relative;
     transition: .5s;
+    padding: 10px;
 }
 
 .card:hover {
@@ -179,12 +180,12 @@ nav {
 
 .card__basket {
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 10px;
     border: none;
     width: 170px;
     height: 40px;
     cursor: pointer;
-    background: url("./img/icons/basket.svg") no-repeat #f60606;
+    background: url("../img/icons/basket.svg") no-repeat #f60606;
     color: #ffffff;
     background-position-x: 15px;
     background-position-y: center;
@@ -193,7 +194,7 @@ nav {
 }
 
 .card__basket:hover {
-    background: url("./img/icons/basket.svg") no-repeat #e58484;
+    background: url("../img/icons/basket.svg") no-repeat #e58484;
     background-position-x: 15px;
     background-position-y: center;
 }
@@ -217,7 +218,7 @@ nav {
 .card__images {
     height: 213px;
     width: 213px;
-    margin: 0 auto 10px;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -274,8 +275,19 @@ nav {
 
 .card__info-product {
     display: grid;
-    margin-bottom: 25px;
     grid-template-rows: 40px auto auto;
+    align-items: center;
+}
+
+.date {
+    text-align: center;
+    font-size: 10px;
+    color: grey;
+}
+.card__date-description {
+    text-align: center;
+    font-size: 10px;
+    color: grey;
 }
 
 /*/headers*/
