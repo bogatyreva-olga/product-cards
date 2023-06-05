@@ -12,12 +12,31 @@ document.addEventListener("DOMContentLoaded", () => {
             modal.style.display = "none";
         }
     });
+    modal.querySelector('.form__minus-btn').addEventListener('click', (e) => {
+        e.preventDefault();
+        let inputElement = getModalElement().querySelector('.form__quantity-input');
+        let value = parseInt(inputElement.value);
+        if (value > 1) {
+            inputElement.value = --value;
+        }
+    });
+    modal.querySelector('.form__plus-btn').addEventListener('click', (e) => {
+        e.preventDefault();
+        let inputElement = getModalElement().querySelector('.form__quantity-input');
+        let value = parseInt(inputElement.value);
+        if (value >= 1 && value < 10) {
+            inputElement.value = ++value;
+        }
+    });
 });
 
 let showModal = (item) => {
     let modal = getModalElement();
+
     modal.querySelector('.form__product-id').value = item.id;
     modal.querySelector('.form__product-title').innerText = item.title;
+    modal.querySelector('.form__quantity-input').value = 1;
+
     let productColors = modal.querySelector('.form__product-colors');
     productColors.innerHTML = "";
     item.colors.forEach((color) => {
@@ -34,16 +53,13 @@ let showModal = (item) => {
         label.setAttribute("for", radio.id);
         label.innerText = color.name;
 
-
         div.appendChild(radio);
         div.appendChild(label);
         productColors.appendChild(div);
     });
 
-
     modal.querySelector('#product-submit').addEventListener('click', (e) => {
         e.preventDefault();
-
         alert("Товар \"" + item.title + "\" успешно приобретен");
     });
     modal.style.display = "block";

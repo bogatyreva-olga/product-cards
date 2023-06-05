@@ -72,12 +72,18 @@
             </div>
             <form id="product-form">
                 <input type="hidden" name="id" class="form__product-id" value="">
-                <div class="form__product-title">Название товара</div>
-                <div class="form__quantity-buttons">
-                    <span>Количество</span>
-                    <button class="form__minus-btn minus-btn-2"></button>
-                    <input type="text" value="1" class="form__quantity-input quantity-input-2" readonly="readonly">
-                    <button class="form__plus-btn plus-btn-2"></button>
+                <div class="form__title-quantity-wrapper">
+                    <div class="form__product-title">Название товара</div>
+                    <div class="form__quantity">
+                        <span>Количество</span>
+                        <div class="form__quantity-buttons">
+                            <button class="form__minus-btn"></button>
+                            <input type="text" value="1" class="form__quantity-input"
+                                   readonly="readonly">
+                            <button class="form__plus-btn"></button>
+                        </div>
+                        <span>шт.</span>
+                    </div>
                 </div>
                 <div class="form__product-colors"></div>
                 <div class="form__comment">

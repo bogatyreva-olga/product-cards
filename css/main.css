@@ -157,7 +157,11 @@ nav {
 }
 
 .catalog__title {
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    text-align: start;
+    font-family: "Rubik Regular", sans-serif;
+    font-size: 24px;
 }
 
 /*card*/
@@ -420,7 +424,7 @@ body.dark-theme .description__text p {
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #888;
     width: 40%;
 }
@@ -473,5 +477,91 @@ body.dark-theme .description__text p {
 
 .color-radio:disabled + label::before {
     background-color: #e9ecef;
+}
+
+.form__quantity {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__quantity {
+    color: #7a7878;
+}
+
+.form__title-quantity-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form__quantity-buttons {
+    width: 95px;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 30px 40px 30px;
+    justify-content: center;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+.form__minus-btn {
+    background: url("../img/icons/minus.png") no-repeat center;
+    cursor: pointer;
+}
+
+.form__plus-btn {
+    background: url("../img/icons/plus.png") no-repeat center;
+    cursor: pointer;
+}
+
+.form__quantity-buttons input {
+    font-family: "Rubik Regular", sans-serif;
+    font-size: 18px;
+    color: #4C4E50;
+    text-align: center;
+    border: none
+}
+
+.form__product-title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.form__product-colors {
+    display: flex;
+    gap: 15px;
+    max-width: 50%;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.form__comment textarea {
+    width: 95%;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    height: 55px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto 10px;
+    outline: none;
+}
+
+#product-submit {
+    width: 150px;
+    background-color: #f60606;
+    height: 35px;
+    color: #ffffff;
+    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+#product-submit:hover {
+    background-color: #e58484;
 }
 
