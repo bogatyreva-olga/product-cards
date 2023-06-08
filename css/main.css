@@ -220,14 +220,15 @@ nav {
 }
 
 .card__images {
-    height: 213px;
-    width: 213px;
+    height: 212px;
+    width: 212px;
     margin: 0 auto;
     position: relative;
 }
 
 .card__images img {
     max-width: 200px;
+    max-height: 200px;
 }
 
 .card__wrapper-aside-icons {
