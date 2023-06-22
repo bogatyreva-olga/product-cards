@@ -1,7 +1,7 @@
 import {getItemsByCategory, getDayInfo} from "./data.js";
 import {toggleTheme} from "./theme.js";
 import {showModal} from "./form.js";
-import {buttonScrollUp} from "./scroll-up.js";
+import {ScrollUp} from "./scroll-up.js";
 
 const CATEGORY_NAME_SHOES = "shoes";
 const CATEGORY_NAME_CLOTHES = "clothes";
@@ -10,7 +10,8 @@ const CATEGORY_NAME_EQUIPMENT = "equipment";
 
 document.addEventListener("DOMContentLoaded", function () {
     toggleTheme();
-    buttonScrollUp.addEventListener();
+    const scrollUp = new ScrollUp();
+    scrollUp.addEventListener();
 
     const createCardElement = (item) => {
         const cardTemplateElement = document.querySelector("#card").content;
