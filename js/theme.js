@@ -12,23 +12,27 @@ let setTheme = (currentTheme) => {
     document.body.classList.add(currentTheme);
 }
 
-let toggleTheme = () => {
-    const btn = document.querySelector(".header__theme");
+class ToggleTheme {
+    #btn = null
+    constructor() {
+        this.#btn = document.querySelector(".header__theme")
+    }
+    addEventListener() {
+        this.#btn.addEventListener("click", () => {
+            let currentTheme = getCurrentTheme();
 
-    btn.addEventListener("click", () => {
-        let currentTheme = getCurrentTheme();
+            document.body.classList.remove(currentTheme);
 
-        document.body.classList.remove(currentTheme);
+            if (currentTheme === DARK_THEME_NAME) {
+                currentTheme = LIGHT_THEME_NAME;
+            } else {
+                currentTheme = DARK_THEME_NAME;
+            }
+            document.body.classList.add(currentTheme);
 
-        if (currentTheme === DARK_THEME_NAME) {
-            currentTheme = LIGHT_THEME_NAME;
-        } else {
-            currentTheme = DARK_THEME_NAME;
-        }
-        document.body.classList.add(currentTheme);
-
-        localStorage.setItem("current-theme", currentTheme);
-    });
+            localStorage.setItem("current-theme", currentTheme);
+        })
+    }
 }
 
 let getCurrentTheme = () => {
@@ -39,4 +43,4 @@ let getCurrentTheme = () => {
     return currentTheme
 }
 
-export {toggleTheme}
+export {ToggleTheme}
