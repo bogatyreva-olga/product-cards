@@ -1,33 +1,46 @@
-const DARK_THEME_NAME = "dark-theme";
-const LIGHT_THEME_NAME = "light-theme";
-
 document.addEventListener("DOMContentLoaded", () => {
+    let theme = new Theme();
+    theme.addEventListener();
 
-    let theme = getCurrentTheme();
-    setTheme(theme);
 });
 
-let setTheme = (currentTheme) => {
-    document.body.classList.remove(DARK_THEME_NAME);
-    document.body.classList.remove(LIGHT_THEME_NAME);
-    document.body.classList.add(currentTheme);
-}
+class Theme {
+    static DARK_NAME = "dark-theme";
+    static LIGHT_NAME = "light-theme";
+    #currentTheme = Theme.DARK_NAME;
+    #btn = null;
 
-class ToggleTheme {
-    #btn = null
     constructor() {
-        this.#btn = document.querySelector(".header__theme")
+        this.#btn = document.querySelector(".header__theme");
+        this.#setCurrentTheme();
     }
+
+    #getCurrentTheme() {
+        this.#currentTheme = localStorage.getItem("current-theme");
+
+        if (this.#currentTheme === null) {
+            this.#currentTheme = Theme.DARK_NAME;
+        }
+        return this.#currentTheme;
+    }
+
+    #setCurrentTheme() {
+        let currentTheme = this.#getCurrentTheme();
+
+        document.body.classList.remove(Theme.DARK_NAME);
+        document.body.classList.remove(Theme.LIGHT_NAME);
+        document.body.classList.add(currentTheme);
+    }
+
     addEventListener() {
         this.#btn.addEventListener("click", () => {
-            let currentTheme = getCurrentTheme();
-
+            let currentTheme = this.#getCurrentTheme();
             document.body.classList.remove(currentTheme);
 
-            if (currentTheme === DARK_THEME_NAME) {
-                currentTheme = LIGHT_THEME_NAME;
+            if (currentTheme === Theme.DARK_NAME) {
+                currentTheme = Theme.LIGHT_NAME;
             } else {
-                currentTheme = DARK_THEME_NAME;
+                currentTheme = Theme.DARK_NAME;
             }
             document.body.classList.add(currentTheme);
 
@@ -36,25 +49,3 @@ class ToggleTheme {
     }
 }
 
-class Theme {
-    #currentTheme = null
-    constructor() {
-        this.#currentTheme = localStorage.getItem("current-theme");
-    }
-    getCurrentTheme() {
-        if (this.#currentTheme === null) {
-            return DARK_THEME_NAME;
-        }
-        return this.#currentTheme
-    }
-}
-
-let getCurrentTheme = () => {
-    let currentTheme = localStorage.getItem("current-theme");
-    if (currentTheme === null) {
-        return DARK_THEME_NAME;
-    }
-    return currentTheme
-}
-
-export {ToggleTheme}

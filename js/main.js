@@ -1,5 +1,4 @@
 import {getItemsByCategory, getDayInfo} from "./data.js";
-import {ToggleTheme} from "./theme.js";
 import {showModal} from "./form.js";
 import {ScrollUp} from "./scroll-up.js";
 
@@ -9,8 +8,6 @@ const CATEGORY_NAME_ACCESSORIES = "accessories";
 const CATEGORY_NAME_EQUIPMENT = "equipment";
 
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleTheme = new ToggleTheme();
-    toggleTheme.addEventListener()
     const scrollUp = new ScrollUp();
     scrollUp.addEventListener();
 
