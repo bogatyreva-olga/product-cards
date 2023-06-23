@@ -2,6 +2,7 @@ const DARK_THEME_NAME = "dark-theme";
 const LIGHT_THEME_NAME = "light-theme";
 
 document.addEventListener("DOMContentLoaded", () => {
+
     let theme = getCurrentTheme();
     setTheme(theme);
 });
@@ -32,6 +33,19 @@ class ToggleTheme {
 
             localStorage.setItem("current-theme", currentTheme);
         })
+    }
+}
+
+class Theme {
+    #currentTheme = null
+    constructor() {
+        this.#currentTheme = localStorage.getItem("current-theme");
+    }
+    getCurrentTheme() {
+        if (this.#currentTheme === null) {
+            return DARK_THEME_NAME;
+        }
+        return this.#currentTheme
     }
 }
 
