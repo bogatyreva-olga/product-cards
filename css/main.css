@@ -75,6 +75,7 @@ header {
     width: 50px;
     cursor: pointer;
     right: 3rem;
+    transform: translate(35%, -30%);
 }
 
 .header__theme img {
@@ -605,5 +606,54 @@ body.dark-theme .description__text p {
     .catalog-style {
         justify-content: center;
     }
+
+    .catalog__title {
+        margin-left: 4%;
+    }
+
+    .header__theme {
+        transform: translate(35%, -30%);
+    }
 }
 
+@media (max-width: 767px) {
+    .header__menu-item a {
+        font-size: 16px;
+    }
+
+    .description__text {
+        padding: 20px 0;
+    }
+
+    .description__text h2 {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    .description__text p {
+        font-size: 16px;
+        text-align: center;
+        line-height: 20px;
+        padding: 0 40px;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .catalog-style {
+        justify-content: center;
+    }
+
+    .catalog__title {
+        margin-left: 4%;
+    }
+    .header__theme img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .header__theme {
+        transform: translate(35%, -30%);
+    }
+}
