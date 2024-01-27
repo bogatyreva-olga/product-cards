@@ -76,6 +76,7 @@ header {
     cursor: pointer;
     right: 3rem;
     transform: translate(35%, -30%);
+    z-index: 100;
 }
 
 .header__theme img {
@@ -111,8 +112,7 @@ nav {
 }
 
 .description__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: block;
 }
 
 .description__text h2 {
@@ -360,6 +360,59 @@ html {
     box-shadow: 0 0 8px 12px rgb(0 0 0 / 22%), 0 0 10px rgb(0 0 0 / 28%);
 }
 
+/*main-nav__toggle*/
+.main-nav__toggle {
+    position: absolute;
+    right: 16px;
+    top: 75px;
+    z-index: 2;
+    display: block;
+    width: 22px;
+    height: 23px;
+    cursor: pointer;
+    border: none;
+}
+
+.main-nav--closed ~ .main-nav__toggle::before {
+    top: 0;
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    right: 0;
+    background-color: #dc0303;
+    box-shadow: 0 12px 0 0 #dc0303, 0 24px 0 0 #dc0303;
+}
+
+.main-nav--opened ~ .main-nav__toggle::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+}
+
+.main-nav--opened ~ .main-nav__toggle::before, .main-nav--opened ~ .main-nav__toggle::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: -16px;
+    width: 50px;
+    height: 6px;
+    background-color: #dc0303;
+}
+
+.main-nav--opened ~ .main-nav__toggle::after {
+    transform: rotate(-45deg);
+}
+
+.main-nav--opened ~ .main-nav__toggle::before, .main-nav--opened ~ .main-nav__toggle::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: -20px;
+    width: 50px;
+    height: 6px;
+    background-color: #dc0303;
+}
+
 /*dark-theme*/
 body.dark-theme header {
     background: #282828;
@@ -412,6 +465,12 @@ body.dark-theme.description__text h2 {
 
 body.dark-theme .description__text p {
     color: #f4f4f4;
+}
+
+body.dark-theme .header {
+    background-image:url("../img/icons/mountain-night.svg");
+    background-repeat: no-repeat;
+    background-position: top -15px center;
 }
 
 /*modal*/
@@ -663,106 +722,12 @@ body.dark-theme .description__text p {
     }
 }
 
-@media (max-width: 680px) {
-    .header__menu-list {
-        flex-direction: column;
-        gap: 0;
-        margin: 0;
-        width: 50%;
-        background-color: gainsboro;
+@media (min-width: 680px) {
+    .description__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .header__menu-list li {
-        height: 20px;
-        border-bottom: 1px solid #5d5d5d;
-        border-right: 1px solid #5d5d5d;
-        border-radius: 0 0 5px 5px;
-        padding: 10px 0 0 5px;
-    }
-
-    .mobile-menu-light {
-        background-color: #312f2f;
-        color: #f4f4f4;
-    }
-
-    .mobile-menu-dark {
-        color: #282828;
-    }
-}
-
-.main-nav {
-    position: relative;
-    min-height: 51px;
-    z-index: 2;
-}
-
-.main-nav__toggle {
-    position: absolute;
-    right: 16px;
-    top: 17px;
-    z-index: 2;
-    display: block;
-    width: 22px;
-    height: 23px;
-    cursor: pointer;
-    border: none;
-    background-color: white;
-}
-
-.main-nav--closed .main-nav__toggle::before {
-    top: 0;
-    content: "";
-    position: absolute;
-    width: 23px;
-    height: 4px;
-    right: 0;
-    background-color: #81b3d2;
-    box-shadow: 0 10px 0 0 #81b3d2, 0 20px 0 0 #81b3d2;
-}
-
-.main-nav--closed .main-nav__toggle:hover::before {
-    top: 0;
-    content: "";
-    position: absolute;
-    width: 23px;
-    height: 4px;
-    right: 0;
-    background-color: #81b3d2;
-    box-shadow: 0 10px 0 0 #81b3d2, 0 20px 0 0 #81b3d2;
-    opacity: 50%;
-}
-
-.main-nav--opened .main-nav__toggle {
-    background-color: transparent;
-
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        top: 10px;
-        left: 0;
-        width: 24px;
-        height: 4px;
-        background-color: #ffffff;
-    }
-
-    &::before {
-        transform: rotate(45deg);
-        box-shadow: none;
-    }
-
-    &::after {
-        transform: rotate(-45deg);
-    }
-}
-
-.main-nav__list {
-    color: white;
-    font-family: "PT Sans", serif;
-    width: 100%;
-}
-
-@media (min-width: 768px) {
     .main-nav__toggle {
         display: none;
     }
@@ -777,8 +742,54 @@ body.dark-theme .description__text p {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
     .main-nav--closed {
         display: none;
     }
+
+    .header__menu-list {
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+        width: 50%;
+        background-color: gainsboro;
+        text-transform: uppercase;
+        transform: translateX(-150%);
+        animation: ani 1s forwards;
+    }
+
+    @keyframes ani {
+        0% {transform: translateX(-150%);}
+        100% {transform: translateY(0);}
+    }
+
+    .header__menu-list li {
+        height: 20px;
+        border-bottom: 1px solid #5d5d5d;
+        border-right: 1px solid #5d5d5d;
+        border-radius: 0 0 5px 5px;
+        padding: 10px 0 0 5px;
+    }
+
+    .header__container {
+        transform: none;
+    }
+
+    .header {
+        background-image:url("../img/icons/mountain.svg");
+        background-repeat: no-repeat;
+        background-position: top -15px center;
+    }
+
+    .header__theme {
+        transform: translate(60%, 20%);
+    }
 }
+
+.main-nav {
+    position: relative;
+    min-height: 51px;
+    z-index: 2;
+}
+
+

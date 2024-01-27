@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="module" src="js/main.js"></script>
-    <script src="js/theme.js"></script>
     <script src="js/toggle-button.js"></script>
+    <script src="js/theme.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/color.css">
     <title>Product cards</title>
@@ -16,7 +16,6 @@
 <header class="header">
     <div class="header__container main-header__wrapper">
         <nav class="header__menu main-nav ">
-            <button class="main-nav__toggle button-menu" type="button"><span class="visually-hidden">Открыть меню</span></button>
             <ul class="header__menu-list main-nav--closed main-nav--nojs">
                 <li class="header__menu-item"><a href="#clothes" class="header__menu-link">Одежда</a>
                 </li>
@@ -27,6 +26,7 @@
                 <li class="header__menu-item"><a href="#accessories" class="header__menu-link">Аксесуары</a>
                 </li>
             </ul>
+            <button class="header__button-menu main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </nav>
         <button class="header__theme">
             <img src="./img/icons/dark.svg" alt="theme">
