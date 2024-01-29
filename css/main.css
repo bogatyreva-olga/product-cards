@@ -361,6 +361,12 @@ html {
 }
 
 /*main-nav__toggle*/
+.main-nav {
+    position: relative;
+    min-height: 51px;
+    z-index: 2;
+}
+
 .main-nav__toggle {
     position: absolute;
     right: 16px;
@@ -403,23 +409,16 @@ html {
     transform: rotate(-45deg);
 }
 
-.main-nav--opened ~ .main-nav__toggle::before, .main-nav--opened ~ .main-nav__toggle::after {
-    content: "";
-    position: absolute;
-    top: 17px;
-    left: -30px;
-    width: 50px;
-    height: 6px;
-    background-color: #dc0303;
-}
-
-/*dark-theme*/
+/*theme, dark-theme*/
 body.dark-theme header {
     background: #282828;
 }
 
 body.dark-theme .header__menu-item a {
     color: #f4f4f4;
+}
+body.dark-theme .header__menu-item a:hover {
+    color: #7a7878;
 }
 
 body.dark-theme .header__menu-item a:hover {
@@ -470,7 +469,13 @@ body.dark-theme .description__text p {
 body.dark-theme .header {
     background-image:url("../img/icons/mountain-night.svg");
     background-repeat: no-repeat;
-    background-position: top -15px center;
+    background-position: top -10px center;
+}
+
+body.light-theme .header {
+    background-image:url("../img/icons/mountain.svg");
+    background-repeat: no-repeat;
+    background-position: top -10px center;
 }
 
 /*modal*/
@@ -752,7 +757,6 @@ body.dark-theme .header {
         gap: 0;
         margin: 0;
         width: 50%;
-        background-color: gainsboro;
         text-transform: uppercase;
         transform: translateX(-150%);
         animation: ani 1s forwards;
@@ -767,7 +771,7 @@ body.dark-theme .header {
         height: 20px;
         border-bottom: 1px solid #5d5d5d;
         border-right: 1px solid #5d5d5d;
-        border-radius: 0 0 5px 5px;
+        border-radius: 0 5px 5px 0;
         padding: 10px 0 0 5px;
     }
 
@@ -784,12 +788,15 @@ body.dark-theme .header {
     .header__theme {
         transform: translate(60%, 20%);
     }
+
+    body.dark-theme .header__menu-item {
+        background-color: #47474b;
+    }
+
+    body.dark-theme .header__menu-item:hover {
+        background-color: #47474b;
+    }
 }
 
-.main-nav {
-    position: relative;
-    min-height: 51px;
-    z-index: 2;
-}
 
 

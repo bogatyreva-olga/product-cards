@@ -1,6 +1,5 @@
 function toggleClassActiveButton() {
     let navMain = document.querySelector('.header__menu-list');
-    navMain.classList.remove('main-nav--nojs');
 
     if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
