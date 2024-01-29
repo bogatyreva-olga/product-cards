@@ -5,7 +5,7 @@ const catalog = [
         image: "img/catalog/clothes/shot-paint-kailas.webp",
         price: 5000,
         sex: "female",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "pink",
@@ -24,7 +24,7 @@ const catalog = [
         image: "img/catalog/accessories/kong-carabine.webp",
         price: 300,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "light-blue",
@@ -48,7 +48,7 @@ const catalog = [
         image: "img/catalog/shoes/kayland-woman-shoes.webp",
         price: 9000,
         sex: "female",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "grey",
@@ -68,7 +68,7 @@ const catalog = [
         image: "img/catalog/clothes/chillaz-women-pant.webp",
         price: 7800,
         sex: "female",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "white",
@@ -88,7 +88,7 @@ const catalog = [
         image: "img/catalog/shoes/slippers-woman-jw.webp",
         price: 6900,
         sex: "female",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "beige",
@@ -107,7 +107,7 @@ const catalog = [
         image: "img/catalog/clothes/dress-j-w.webp",
         price: 3500,
         sex: "female",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "blue",
@@ -126,7 +126,7 @@ const catalog = [
         image: "img/catalog/shoes/sneakers-man-dolomite.webp",
         price: 11500,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "beige",
@@ -141,7 +141,7 @@ const catalog = [
         image: "img/catalog/clothes/leggings-man-moloya.webp",
         price: 7200,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "black",
@@ -156,7 +156,7 @@ const catalog = [
         image: "img/catalog/shoes/sneakers-man-kailas.webp",
         price: 9100,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "red",
@@ -175,7 +175,7 @@ const catalog = [
         image: "img/catalog/clothes/t-shirt-man-jw.webp",
         price: 2800,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "grey",
@@ -194,7 +194,7 @@ const catalog = [
         image: "img/catalog/clothes/jacket-man-sivera-hort.webp",
         price: 30000,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "beige",
@@ -213,7 +213,7 @@ const catalog = [
         image: "img/catalog/equipment/belay-device-piranha.webp",
         price: 3500,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "light-blue",
@@ -228,7 +228,7 @@ const catalog = [
         image: "img/catalog/equipment/ice-ax-dron.webp",
         price: 12000,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "red",
@@ -247,7 +247,7 @@ const catalog = [
         image: "img/catalog/equipment/rope-edelrid.webp",
         price: 11700,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "red",
@@ -266,7 +266,7 @@ const catalog = [
         image: "img/catalog/clothes/man-jack_wolfskin_big_snow_pants.webp",
         price: 13100,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "green",
@@ -285,7 +285,7 @@ const catalog = [
         image: "img/catalog/clothes/jacket-membrain-jw.webp",
         price: 10000,
         sex: "female",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "blue",
@@ -304,7 +304,7 @@ const catalog = [
         image: "img/catalog/clothes/jacket-kailas.webp",
         price: 9800,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "blue",
@@ -323,7 +323,7 @@ const catalog = [
         image: "img/catalog/accessories/cap-wool.webp",
         price: 2400,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "grey",
@@ -346,7 +346,7 @@ const catalog = [
         image: "img/catalog/equipment/skyhook-kong-m.webp",
         price: 2000,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "black",
@@ -361,7 +361,7 @@ const catalog = [
         image: "img/catalog/shoes/sneakers-merrel-man.webp",
         price: 8000,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "beige",
@@ -380,7 +380,7 @@ const catalog = [
         image: "img/catalog/shoes/sneakers-merrel-man.webp",
         price: 8000,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "beige",
@@ -399,7 +399,7 @@ const catalog = [
         image: "img/catalog/accessories/buff-wool.webp",
         price: 3700,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "beige",
@@ -422,7 +422,7 @@ const catalog = [
         image: "img/catalog/accessories/gloves-velo.webp",
         price: 2900,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "blue",
@@ -445,7 +445,7 @@ const catalog = [
         image: "img/catalog/shoes/shoes-arcteryx-man.webp",
         price: 13000,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "black",
@@ -464,7 +464,7 @@ const catalog = [
         image: "img/catalog/equipment/belay-device-rig.webp",
         price: 18000,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "black",
@@ -483,7 +483,7 @@ const catalog = [
         image: "img/catalog/equipment/loop-kong.webp",
         price: 2100,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "white",
@@ -498,7 +498,7 @@ const catalog = [
         image: "img/catalog/clothes/vest-tnf-man.webp",
         price: 11500,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "orange",
@@ -517,7 +517,7 @@ const catalog = [
         image: "img/catalog/shoes/shoes-asolo-woman.webp",
         price: 20500,
         sex: "female",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "turquoise",
@@ -536,7 +536,7 @@ const catalog = [
         image: "img/catalog/shoes/garsport-shoes-man.webp",
         price: 12500,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "brown",
@@ -551,7 +551,7 @@ const catalog = [
         image: "img/catalog/accessories/socks-sport.webp",
         price: 800,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "white",
@@ -578,7 +578,7 @@ const catalog = [
         image: "img/catalog/shoes/sneakers-man-jack-wolfskin.webp",
         price: 11300,
         sex: "male",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "brown",
@@ -593,7 +593,7 @@ const catalog = [
         image: "img/catalog/equipment/carabine-vertikal.webp",
         price: 750,
         sex: "unisex",
-        publicationDate: "01.01.2022",
+        publicationDate: "01.01.2024",
         colors: [
             {
                 slug: "grey",
@@ -608,7 +608,7 @@ const catalog = [
         image: "img/catalog/clothes/maloja_womens_dambelm_sport_shirt.webp",
         price: 5500,
         sex: "female",
-        publicationDate: "01.31.2022",
+        publicationDate: "01.31.2024",
         colors: [
             {
                 slug: "blue",
